@@ -1660,6 +1660,29 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "Livraria.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Livraria.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Livraria.Domain.dll": {}
+        }
+      },
+      "Livraria.Infra.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Livraria.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Livraria.Infra.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Livraria.Infra.Data.dll": {}
+        }
       }
     }
   },
@@ -6103,10 +6126,22 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "Livraria.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../Livraria.Domain/Livraria.Domain.csproj",
+      "msbuildProject": "../../Livraria.Domain/Livraria.Domain.csproj"
+    },
+    "Livraria.Infra.Data/1.0.0": {
+      "type": "project",
+      "path": "../../Livraria.Infra.Data/Livraria.Infra.Data.csproj",
+      "msbuildProject": "../../Livraria.Infra.Data/Livraria.Infra.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Livraria.Domain >= 1.0.0",
+      "Livraria.Infra.Data >= 1.0.0",
       "MSTest.TestAdapter >= 2.2.3",
       "MSTest.TestFramework >= 2.2.3",
       "Microsoft.NET.Test.Sdk >= 16.9.4",
@@ -6139,7 +6174,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Vini\\source\\repos\\vinibaum\\ewave-livraria-plenoII\\Livraria.Domain\\Livraria.Domain.csproj": {
+              "projectPath": "C:\\Users\\Vini\\source\\repos\\vinibaum\\ewave-livraria-plenoII\\Livraria.Domain\\Livraria.Domain.csproj"
+            },
+            "C:\\Users\\Vini\\source\\repos\\vinibaum\\ewave-livraria-plenoII\\Livraria.Infra.Data\\Livraria.Infra.Data.csproj": {
+              "projectPath": "C:\\Users\\Vini\\source\\repos\\vinibaum\\ewave-livraria-plenoII\\Livraria.Infra.Data\\Livraria.Infra.Data.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

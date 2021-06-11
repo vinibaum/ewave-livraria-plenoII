@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "Livraria.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Livraria.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Livraria.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Livraria.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Livraria.Domain/Livraria.Domain.csproj",
+      "msbuildProject": "../Livraria.Domain/Livraria.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "Livraria.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Vini\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Vini\\source\\repos\\vinibaum\\ewave-livraria-plenoII\\Livraria.Domain\\Livraria.Domain.csproj": {
+              "projectPath": "C:\\Users\\Vini\\source\\repos\\vinibaum\\ewave-livraria-plenoII\\Livraria.Domain\\Livraria.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

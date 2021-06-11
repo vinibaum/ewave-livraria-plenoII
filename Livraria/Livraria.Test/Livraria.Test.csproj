@@ -13,4 +13,9 @@
     <PackageReference Include="coverlet.collector" Version="3.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Livraria.Domain\Livraria.Domain.csproj" />
+    <ProjectReference Include="..\..\Livraria.Infra.Data\Livraria.Infra.Data.csproj" />
+  </ItemGroup>
+
 </Project>
