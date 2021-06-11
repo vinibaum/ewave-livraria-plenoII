@@ -5,8 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Entitites\" />
+    <Folder Include="Entitites\Instituicao\" />
+    <Folder Include="Entitites\Livro\" />
+    <Folder Include="Entitites\UsuarioLivroEmprestado\" />
+    <Folder Include="Entitites\Usuario\" />
+    <Folder Include="Interfaces\Services\" />
+    <Folder Include="Interfaces\Repositories\" />
     <Folder Include="Services\" />
   </ItemGroup>
 

@@ -1,0 +1,8 @@
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Application\bin\Debug\netcoreapp3.1\Livraria.Application.deps.json
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Application\bin\Debug\netcoreapp3.1\Livraria.Application.dll
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Application\bin\Debug\netcoreapp3.1\Livraria.Application.pdb
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Application\obj\Debug\netcoreapp3.1\Livraria.Application.AssemblyInfoInputs.cache
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Application\obj\Debug\netcoreapp3.1\Livraria.Application.AssemblyInfo.cs
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Application\obj\Debug\netcoreapp3.1\Livraria.Application.csproj.CoreCompileInputs.cache
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Application\obj\Debug\netcoreapp3.1\Livraria.Application.dll
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Application\obj\Debug\netcoreapp3.1\Livraria.Application.pdb
