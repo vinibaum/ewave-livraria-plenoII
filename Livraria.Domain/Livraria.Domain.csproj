@@ -5,10 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entitites\Instituicao\" />
-    <Folder Include="Entitites\Livro\" />
-    <Folder Include="Entitites\UsuarioLivroEmprestado\" />
-    <Folder Include="Entitites\Usuario\" />
+    <Folder Include="Entities\Livro\" />
+    <Folder Include="Entities\UsuarioLivroEmprestado\" />
+    <Folder Include="Entities\Usuario\" />
     <Folder Include="Interfaces\Services\" />
     <Folder Include="Interfaces\Repositories\" />
     <Folder Include="Services\" />
