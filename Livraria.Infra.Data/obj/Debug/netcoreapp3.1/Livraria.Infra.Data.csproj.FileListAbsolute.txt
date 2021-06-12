@@ -6,3 +6,7 @@ C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Infra.Data\o
 C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Infra.Data\obj\Debug\netcoreapp3.1\Livraria.Infra.Data.csproj.CoreCompileInputs.cache
 C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Infra.Data\obj\Debug\netcoreapp3.1\Livraria.Infra.Data.dll
 C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Infra.Data\obj\Debug\netcoreapp3.1\Livraria.Infra.Data.pdb
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Infra.Data\bin\Debug\netcoreapp3.1\Livraria.Domain.dll
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Infra.Data\bin\Debug\netcoreapp3.1\Livraria.Domain.pdb
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Infra.Data\obj\Debug\netcoreapp3.1\Livraria.Infra.Data.csproj.AssemblyReference.cache
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Infra.Data\obj\Debug\netcoreapp3.1\Livraria.Infra.Data.csproj.CopyComplete

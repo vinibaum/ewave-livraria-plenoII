@@ -6,3 +6,9 @@ C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Infra.CrossC
 C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Infra.CrossCutting\obj\Debug\netcoreapp3.1\Livraria.Infra.CrossCutting.csproj.CoreCompileInputs.cache
 C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Infra.CrossCutting\obj\Debug\netcoreapp3.1\Livraria.Infra.CrossCutting.dll
 C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Infra.CrossCutting\obj\Debug\netcoreapp3.1\Livraria.Infra.CrossCutting.pdb
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Infra.CrossCutting\bin\Debug\netcoreapp3.1\Livraria.Domain.dll
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Infra.CrossCutting\bin\Debug\netcoreapp3.1\Livraria.Infra.Data.dll
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Infra.CrossCutting\bin\Debug\netcoreapp3.1\Livraria.Infra.Data.pdb
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Infra.CrossCutting\bin\Debug\netcoreapp3.1\Livraria.Domain.pdb
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Infra.CrossCutting\obj\Debug\netcoreapp3.1\Livraria.Infra.CrossCutting.csproj.AssemblyReference.cache
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Infra.CrossCutting\obj\Debug\netcoreapp3.1\Livraria.Infra.CrossCutting.csproj.CopyComplete
