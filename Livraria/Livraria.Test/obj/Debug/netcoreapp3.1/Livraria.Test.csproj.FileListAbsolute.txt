@@ -118,3 +118,5 @@ C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.Tes
 C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.Test\bin\Debug\netcoreapp3.1\Livraria.Infra.Data.dll
 C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.Test\bin\Debug\netcoreapp3.1\Livraria.Domain.pdb
 C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.Test\bin\Debug\netcoreapp3.1\Livraria.Infra.Data.pdb
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.Test\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.Test\bin\Debug\netcoreapp3.1\Moq.dll

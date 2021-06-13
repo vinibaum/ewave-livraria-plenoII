@@ -28,7 +28,7 @@ namespace Livraria.App
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddControllers().AddJsonOptions(options => options.JsonSerializerOptions.PropertyNameCaseInsensitive = false); ;
+            services.AddControllers().AddJsonOptions(options => options.JsonSerializerOptions.PropertyNameCaseInsensitive = false);
             services.AddSwaggerGen();
             services.AddDbContext<LivrariaContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("connection")));
