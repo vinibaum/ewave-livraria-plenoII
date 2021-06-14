@@ -25,16 +25,16 @@ namespace Livraria.Infra.Data.Repositories
         }
 
 
-        public IEnumerable<Livro> GetParaEmprestar()
+        public IEnumerable<Livro> GetEmprestimo()
         {
             var dados = _Context.Livro.Where(x => x.Emprestado == false && x.Reservado == false);
             return dados;
         }
 
-        public IEnumerable<Livro> GetParaDevolver(int idUsuario)
+        public IEnumerable<Livro> GetDevolucao(int idUsuario)
         {
 
-            var livrosEmpresdados = _Context.UsuarioLivroEmprestado.Where(x => x.IdUsuario == idUsuario && x.Devolvido == false);
+            var livrosEmpresdados = _Context.UsuarioLivroEmprestado.Where(x => x.IdUsuario == idUsuario && x.IsDevolvido == false);
             var livos = _Context.Livro.Where(x => livrosEmpresdados.Any(y => y.IdLivro == x.Id));
             return livos;
         }

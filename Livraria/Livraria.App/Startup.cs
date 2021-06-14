@@ -31,7 +31,7 @@ namespace Livraria.App
             services.AddControllers().AddJsonOptions(options => options.JsonSerializerOptions.PropertyNameCaseInsensitive = false);
             services.AddSwaggerGen();
             services.AddDbContext<LivrariaContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("connection")));
+            options.UseSqlServer(Configuration.GetConnectionString("connection"), b => b.MigrationsAssembly("Livraria.Infra.Data"))); 
             NativeInjectorMapping.RegisterServices(services);
 
             services.AddCors(options =>

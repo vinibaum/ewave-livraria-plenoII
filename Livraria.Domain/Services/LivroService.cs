@@ -90,7 +90,7 @@ namespace Livraria.Domain.Services
             {
                 var livro = _livroRepository.GetById(idLivro);
                 var usuario = _usuarioRepository.GetById(idUsuario);
-                var usuarioLivroEmprestado = usuario.LivrosEmprestados.Where(x => x.IdLivro == livro.Id && x.Devolvido == false).FirstOrDefault();
+                var usuarioLivroEmprestado = usuario.LivrosEmprestados.Where(x => x.IdLivro == livro.Id && x.IsDevolvido == false).FirstOrDefault();
                 usuarioLivroEmprestado.DevolverLivro();
                 livro.DevolverLivro();
                 await _livroRepository.Update(livro);
@@ -127,12 +127,12 @@ namespace Livraria.Domain.Services
 
         public IEnumerable<Livro> ObertParaEmprestar()
         {
-            return _livroRepository.GetParaEmprestar();
+            return _livroRepository.GetEmprestimo();
         }
 
         public IEnumerable<Livro> ObertParaDevolver(int idUsuario)
         {
-            return _livroRepository.GetParaDevolver(idUsuario);
+            return _livroRepository.GetDevolucao(idUsuario);
         }
 
         public IEnumerable<Livro> FiltrarTitulo(string filtro)

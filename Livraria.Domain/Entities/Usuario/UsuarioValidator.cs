@@ -59,7 +59,7 @@ namespace Livraria.Domain.Entities.FolderUsuario
                 AdicionaErro("Nome da instituição de ensino é obrigatório");
 
             if (this.Valido && _dto.Nome.Length > 1000)
-                AdicionaErro("Nome não pode ter mais do que mil caracters");
+                AdicionaErro("Nome não pode possuir mais do que mil caracpossuirs");
         }
         private void ValidarEndereço()
         {
@@ -67,7 +67,7 @@ namespace Livraria.Domain.Entities.FolderUsuario
                 AdicionaErro("Endereço é obrigatório");
 
             if (this.Valido && this._dto.Endereco.Length > 1000)
-                AdicionaErro("Endereço não pode ter mais do que mil caracters");
+                AdicionaErro("Endereço não pode possuir mais do que mil caracpossuirs");
         }
         private void ValidarCPF()
         {
@@ -75,12 +75,12 @@ namespace Livraria.Domain.Entities.FolderUsuario
                 AdicionaErro("CPF é obrigatório");
 
             if (_dto.CPF?.Length != 11)
-                AdicionaErro("CPF dever ter 11 Dígitos");
+                AdicionaErro("CPF dever possuir 11 Dígitos");
 
             if (ListaErros.Count == 0)
             {
                 if (!Regex.IsMatch(_dto.CPF, "^\\d+$"))
-                    AdicionaErro("CPF dever ter apenas números");
+                    AdicionaErro("CPF dever possuir apenas números");
             }
 
             if (ListaErros.Count == 0)
@@ -95,13 +95,13 @@ namespace Livraria.Domain.Entities.FolderUsuario
                 AdicionaErro("Telefone é obrigatório");
 
             if (_dto.Telefone?.Length < 9)
-                AdicionaErro("Telefone dever ter mais de 9 digitos");
+                AdicionaErro("Telefone deve possuir 9 ou mais dígitos");
         }
 
         private void ValidarIntituicaoDeEnsino()
         {
             if (_instituicaoDeEnsinoRepository.GetById(_dto.IdInstituicaoDeEnsino) == null)
-                AdicionaErro("Instituição de ensino não localizado");
+                AdicionaErro("Instituição de ensino não localizada");
         }
         private bool ValidarDigitoVerificadoCpf()
         {

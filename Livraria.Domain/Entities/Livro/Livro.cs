@@ -33,9 +33,9 @@ namespace Livraria.Domain.Entities.FolderLivro
             IdUsuarioReserva = null;
             Emprestado = true;
         }
-        public bool Reservar(Usuario usuarioReservar)
+        public bool Reservar(Usuario usuarioReserva)
         {
-            IdUsuarioReserva = usuarioReservar.Id;
+            IdUsuarioReserva = usuarioReserva.Id;
             Reservado = true;
             return true;
         }

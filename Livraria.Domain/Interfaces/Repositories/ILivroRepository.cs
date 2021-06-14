@@ -12,9 +12,9 @@ namespace Livraria.Domain.Interfaces.Repositories
 
         IEnumerable<Livro> GetAll();
 
-        IEnumerable<Livro> GetParaEmprestar();
+        IEnumerable<Livro> GetEmprestimo();
 
-        IEnumerable<Livro> GetParaDevolver(int idUsuario);
+        IEnumerable<Livro> GetDevolucao(int idUsuario);
 
         IEnumerable<Livro> GetByFilter(string filtro);
         Livro GetById(int Id);

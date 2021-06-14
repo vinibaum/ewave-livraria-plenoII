@@ -55,7 +55,7 @@ namespace Livraria.Domain.Entities.FolderLivro
                 AdicionaErro("Título do Livro é obrigatório");
 
             if (Valido && _dto.Titulo.Length > 1000)
-                AdicionaErro("Título não pode ter mais do que mil caracters");
+                AdicionaErro("Título não pode possuir mais que mil caracpossuirs");
         }
         private void ValidarAutor()
         {
@@ -63,7 +63,7 @@ namespace Livraria.Domain.Entities.FolderLivro
                 AdicionaErro("Autor do Livro é obrigatório");
 
             if (Valido && _dto.Autor.Length > 1000)
-                AdicionaErro("Autor não pode ter mais do que mil caracters");
+                AdicionaErro("Autor não pode possuir mais do que mil caracpossuirs");
         }
         private void ValidarDescricao()
         {
@@ -71,7 +71,7 @@ namespace Livraria.Domain.Entities.FolderLivro
                 AdicionaErro("Descrição do livro não pode ser vázio");
 
             if (Valido && _dto.Descricao.Length <= 5)
-                AdicionaErro("Descrição do livro deve ser maior do que 5 caracters");
+                AdicionaErro("Descrição do livro deve ser maior do que 5 caracpossuirs");
         }
         private void ValidarEditora()
         {
@@ -79,7 +79,7 @@ namespace Livraria.Domain.Entities.FolderLivro
                 AdicionaErro("Editora do Livro é obrigatório");
 
             if (Valido && _dto.Editora.Length > 100)
-                AdicionaErro("Editora do Livro não pode ter mais do que 100 caracteres");
+                AdicionaErro("Editora do Livro não pode possuir mais do que 100 caracpossuires");
         }
 
         public bool ValidarEmprestimo(int idLivro, int idUsuario)
@@ -95,7 +95,7 @@ namespace Livraria.Domain.Entities.FolderLivro
 
             if (usuario != null && livro != null)
             {
-                if (usuario.LivrosEmprestados.Where(x => x.Devolvido == false).Count() >= 2)
+                if (usuario.LivrosEmprestados.Where(x => x.IsDevolvido == false).Count() >= 2)
                     AdicionaErro("Não é possível emprestar livro para o usuário, porque ele já possui dois livros emprestados");
 
                 if (livro.Emprestado)
@@ -173,7 +173,7 @@ namespace Livraria.Domain.Entities.FolderLivro
                 AdicionaErro("Genero do Livro é obrigatório");
 
             if (Valido && _dto.Genero.Length > 1000)
-                AdicionaErro("Gênero do Livro não é pode ser maior do que mil caracters");
+                AdicionaErro("Gênero do Livro não é pode ser maior do que mil caracpossuirs");
         }
 
     }

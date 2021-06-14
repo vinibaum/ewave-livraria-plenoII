@@ -11,11 +11,11 @@ namespace Livraria.Domain.Entities.FolderUsuarioLivroEmprestado
         public int IdLivro { get; set; }
         public DateTime DataEmprestimo { get; set; }
         public DateTime? DataDevolucao { get; set; }
-        public bool Devolvido { get; set; }
+        public bool IsDevolvido { get; set; }
 
         public void DevolverLivro()
         {
-            Devolvido = true;
+            IsDevolvido = true;
             DataDevolucao = DateTime.Now;
         }
     }

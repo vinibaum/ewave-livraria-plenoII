@@ -19,7 +19,7 @@ namespace Livraria.Infra.Data.Mappings
             builder.Property(b => b.IdUsuario);
             builder.Property(b => b.DataEmprestimo);
             builder.Property(b => b.DataDevolucao);
-            builder.Property(b => b.Devolvido);
+            builder.Property(b => b.IsDevolvido);
 
 
 
