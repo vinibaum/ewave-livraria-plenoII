@@ -14,7 +14,6 @@ namespace Livraria.Infra.Data.Repositories
 {
    public class UsuarioRepository : RepositoryBase<Usuario>, IUsuarioRepository
     {
-
         public UsuarioRepository(LivrariaContext context)
             : base(context)
         { }
@@ -30,6 +29,5 @@ namespace Livraria.Infra.Data.Repositories
             var dados = _Context.Usuario.Include(c => c.LivrosEmprestados).AsTracking().FirstOrDefault(p => p.Id == id);
             return dados;
         }
-
     }
 }

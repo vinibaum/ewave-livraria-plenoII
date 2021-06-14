@@ -13,7 +13,6 @@ namespace Livraria.Infra.Data.Repositories
 {
     public class LivroRepository : RepositoryBase<Livro>, ILivroRepository
     {
-
         public LivroRepository(LivrariaContext context)
             : base(context)
         { }
@@ -23,7 +22,6 @@ namespace Livraria.Infra.Data.Repositories
             var dados = _Context.Livro.ToList();
             return dados;
         }
-
 
         public IEnumerable<Livro> GetEmprestimo()
         {
@@ -50,6 +48,5 @@ namespace Livraria.Infra.Data.Repositories
             var dados = _Context.Livro.Include(x => x.UsuarioReserva).AsTracking().FirstOrDefault(p => p.Id == Id);
             return dados;
         }
-
     }
 }

@@ -50,7 +50,7 @@ namespace Livraria.Domain.Entities.FolderInstituicaoDeEnsino
                 AdicionaErro("Nome da instituição de ensino é obrigatório");
 
             if (this.Valido && _dto.Nome.Length > 1000)
-                AdicionaErro("Nome não pode ter mais do que mil caracters");
+                AdicionaErro("Nome não pode possuir mais do que mil caracters");
         }
         public void ValidarEndereço()
         {
@@ -58,7 +58,7 @@ namespace Livraria.Domain.Entities.FolderInstituicaoDeEnsino
                 AdicionaErro("Endereço é obrigatório");
 
             if (this.Valido && _dto.Endereco.Length > 1000)
-                AdicionaErro("Endereço não pode ter mais do que mil caracters");
+                AdicionaErro("Endereço não pode possuir mais do que mil caracteres");
         }
         public void ValidarCPNJ()
         {
@@ -68,13 +68,13 @@ namespace Livraria.Domain.Entities.FolderInstituicaoDeEnsino
             if (ListaErros.Count == 0)
             {
                 if (_dto.CNPJ.Length != 14)
-                    AdicionaErro("CNPJ dever ter 14 Dígitos");
+                    AdicionaErro("CNPJ dever possuir 14 Dígitos");
             }
 
             if (ListaErros.Count == 0)
             {
                 if (!Regex.IsMatch(_dto.CNPJ, "^\\d+$"))
-                    AdicionaErro("CNPJ dever ter apenas números");
+                    AdicionaErro("CNPJ dever possuir apenas números");
             }
 
             if (ListaErros.Count == 0)

@@ -10,7 +10,6 @@ namespace Livraria.Infra.Data.Repositories.Base
 {
     public class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : class
     {
-
         protected readonly LivrariaContext _Context;
         protected DbSet<TEntity> _DbSet;
 
@@ -19,6 +18,7 @@ namespace Livraria.Infra.Data.Repositories.Base
             _Context = context;
             _DbSet = _Context.Set<TEntity>();
         }
+
         public async Task Save(TEntity entity)
         {
             _DbSet.Add(entity);
@@ -41,6 +41,5 @@ namespace Livraria.Infra.Data.Repositories.Base
         {
             _Context.Dispose();
         }
-
     }
 }

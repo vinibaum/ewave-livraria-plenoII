@@ -59,10 +59,11 @@ namespace Livraria.Domain.Services
             return _instituicaoDeEnsinoRepository.GetById(InstituicaoDeEnsinoId);
         }
 
-        public IEnumerable<InstituicaoDeEnsino> ObertTodos()
+        public IEnumerable<InstituicaoDeEnsino> ObterTodos()
         {
             return _instituicaoDeEnsinoRepository.GetAll();
         }
+
         public void Dispose()
         {
             _instituicaoDeEnsinoRepository.Dispose();

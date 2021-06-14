@@ -55,7 +55,7 @@ namespace Livraria.Domain.Entities.FolderLivro
                 AdicionaErro("Título do Livro é obrigatório");
 
             if (Valido && _dto.Titulo.Length > 1000)
-                AdicionaErro("Título não pode possuir mais que mil caracpossuirs");
+                AdicionaErro("Título não pode possuir mais que mil caracteres");
         }
         private void ValidarAutor()
         {
@@ -63,7 +63,7 @@ namespace Livraria.Domain.Entities.FolderLivro
                 AdicionaErro("Autor do Livro é obrigatório");
 
             if (Valido && _dto.Autor.Length > 1000)
-                AdicionaErro("Autor não pode possuir mais do que mil caracpossuirs");
+                AdicionaErro("Autor não pode possuir mais do que mil caracteres");
         }
         private void ValidarDescricao()
         {
@@ -71,7 +71,7 @@ namespace Livraria.Domain.Entities.FolderLivro
                 AdicionaErro("Descrição do livro não pode ser vázio");
 
             if (Valido && _dto.Descricao.Length <= 5)
-                AdicionaErro("Descrição do livro deve ser maior do que 5 caracpossuirs");
+                AdicionaErro("Descrição do livro deve ser maior do que 5 caracteres");
         }
         private void ValidarEditora()
         {
@@ -79,7 +79,7 @@ namespace Livraria.Domain.Entities.FolderLivro
                 AdicionaErro("Editora do Livro é obrigatório");
 
             if (Valido && _dto.Editora.Length > 100)
-                AdicionaErro("Editora do Livro não pode possuir mais do que 100 caracpossuires");
+                AdicionaErro("Editora do Livro não pode possuir mais do que 100 caracteres");
         }
 
         public bool ValidarEmprestimo(int idLivro, int idUsuario)
@@ -165,7 +165,7 @@ namespace Livraria.Domain.Entities.FolderLivro
                 AdicionaErro("Quantidade de páginas é obrigatório");
 
             if (_dto.Paginas >= 300000)
-                AdicionaErro("Quantidade de Páginas não pode ser maior do que 300 mil ");
+                AdicionaErro("Quantidade de páginas não pode ser maior do que 300 mil");
         }
         private void ValidarGeneroLivro()
         {
@@ -173,7 +173,7 @@ namespace Livraria.Domain.Entities.FolderLivro
                 AdicionaErro("Genero do Livro é obrigatório");
 
             if (Valido && _dto.Genero.Length > 1000)
-                AdicionaErro("Gênero do Livro não é pode ser maior do que mil caracpossuirs");
+                AdicionaErro("Gênero do Livro não é pode ser maior do que mil caracteres");
         }
 
     }

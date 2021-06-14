@@ -59,7 +59,7 @@ namespace Livraria.Domain.Entities.FolderUsuario
                 AdicionaErro("Nome da instituição de ensino é obrigatório");
 
             if (this.Valido && _dto.Nome.Length > 1000)
-                AdicionaErro("Nome não pode possuir mais do que mil caracpossuirs");
+                AdicionaErro("Nome não pode possuir mais do que mil caracteres");
         }
         private void ValidarEndereço()
         {
@@ -67,7 +67,7 @@ namespace Livraria.Domain.Entities.FolderUsuario
                 AdicionaErro("Endereço é obrigatório");
 
             if (this.Valido && this._dto.Endereco.Length > 1000)
-                AdicionaErro("Endereço não pode possuir mais do que mil caracpossuirs");
+                AdicionaErro("Endereço não pode possuir mais do que mil caracteres");
         }
         private void ValidarCPF()
         {

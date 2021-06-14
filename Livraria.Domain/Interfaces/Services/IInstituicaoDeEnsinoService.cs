@@ -10,7 +10,7 @@ namespace Livraria.Domain.Interfaces.Services
 {
    public interface IInstituicaoDeEnsinoService: IServiceBase<InstituicaoDeEnsino>
     {
-        IEnumerable<InstituicaoDeEnsino> ObertTodos();
+        IEnumerable<InstituicaoDeEnsino> ObterTodos();
         InstituicaoDeEnsino GetById(int id);
         Task Save(InstituicaoDeEnsinoDto entity);
         Task Update(int id,InstituicaoDeEnsinoDto entity);

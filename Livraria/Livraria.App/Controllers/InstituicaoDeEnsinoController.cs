@@ -21,7 +21,7 @@ namespace Livraria.Presentation.Controllers
         [HttpGet]
         public IEnumerable<InstituicaoDeEnsino> Get()
         {
-            return this._instituicaoDeEnsinoService.ObertTodos();
+            return this._instituicaoDeEnsinoService.ObterTodos();
         }
 
         [HttpGet("{id:int}")]
