@@ -27,11 +27,10 @@ namespace Livraria.Presentation.Controllers
             return this._livroService.ObertTodos();
         }
 
-
         [HttpGet("emprestar")]
         public IEnumerable<Livro> ObterTodosEmprestar()
         {
-            return this._livroService.ObertParaEmprestar();
+            return this._livroService.ObterParaEmprestar();
         }
 
         [HttpGet("{idUsuario:int}/devolver")]

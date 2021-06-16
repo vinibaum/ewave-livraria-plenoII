@@ -13,7 +13,7 @@ namespace Livraria.Domain.Interfaces.Services
     {
         IEnumerable<Livro> FiltrarTitulo(string filtro);
         IEnumerable<Livro> ObertTodos();
-        IEnumerable<Livro> ObertParaEmprestar();
+        IEnumerable<Livro> ObterParaEmprestar();
         IEnumerable<Livro> ObertParaDevolver(int idUsuario);
         Livro GetById(int Id);
         Task Emprestar(int idLivro, int idUsuario);

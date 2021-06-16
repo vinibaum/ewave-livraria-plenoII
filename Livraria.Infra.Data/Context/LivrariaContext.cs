@@ -1,6 +1,5 @@
 ﻿using Livraria.Domain.Entities;
 using Livraria.Domain.Entities.FolderInstituicaoDeEnsino;
-using Livraria.Domain.Entities.FolderLivro;
 using Livraria.Domain.Entities.FolderUsuario;
 using Livraria.Domain.Entities.FolderUsuarioLivroEmprestado;
 using Livraria.Infra.Data.Mappings;
@@ -18,7 +17,7 @@ namespace Livraria.Infra.Data.Context
             : base(options)
         { }
 
-        public DbSet<Livro> Livro { get; set; }
+        public DbSet<Domain.Entities.FolderLivro.Livro> Livro { get; set; }
         public DbSet<InstituicaoDeEnsino> InstituicaoDeEnsino { get; set; }
         public DbSet<Usuario> Usuario { get; set; }
         public DbSet<UsuarioLivroEmprestado> UsuarioLivroEmprestado { get; set; }

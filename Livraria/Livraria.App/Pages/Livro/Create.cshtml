@@ -1,0 +1,79 @@
+﻿@page
+@model Livraria.App.Pages.Livro.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Livro</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Livro.Titulo" class="control-label"></label>
+                <input asp-for="Livro.Titulo" class="form-control" />
+                <span asp-validation-for="Livro.Titulo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Livro.Genero" class="control-label"></label>
+                <input asp-for="Livro.Genero" class="form-control" />
+                <span asp-validation-for="Livro.Genero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Livro.Publicacao" class="control-label"></label>
+                <input asp-for="Livro.Publicacao" class="form-control" />
+                <span asp-validation-for="Livro.Publicacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Livro.Paginas" class="control-label"></label>
+                <input asp-for="Livro.Paginas" class="form-control" />
+                <span asp-validation-for="Livro.Paginas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Livro.Autor" class="control-label"></label>
+                <input asp-for="Livro.Autor" class="form-control" />
+                <span asp-validation-for="Livro.Autor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Livro.Editora" class="control-label"></label>
+                <input asp-for="Livro.Editora" class="form-control" />
+                <span asp-validation-for="Livro.Editora" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Livro.Descricao" class="control-label"></label>
+                <input asp-for="Livro.Descricao" class="form-control" />
+                <span asp-validation-for="Livro.Descricao" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Livro.Emprestado" /> @Html.DisplayNameFor(model => model.Livro.Emprestado)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Livro.Reservado" /> @Html.DisplayNameFor(model => model.Livro.Reservado)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Livro.IdUsuarioReserva" class="control-label"></label>
+                <select asp-for="Livro.IdUsuarioReserva" class ="form-control" asp-items="ViewBag.IdUsuarioReserva"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

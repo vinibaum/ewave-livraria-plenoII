@@ -125,7 +125,7 @@ namespace Livraria.Domain.Services
             return _livroRepository.GetAll();
         }
 
-        public IEnumerable<Livro> ObertParaEmprestar()
+        public IEnumerable<Livro> ObterParaEmprestar()
         {
             return _livroRepository.GetEmprestimo();
         }
