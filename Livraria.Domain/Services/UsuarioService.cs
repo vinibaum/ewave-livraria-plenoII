@@ -69,7 +69,7 @@ namespace Livraria.Domain.Services
             return _UsuarioRepository.GetById(UsuarioId);
         }
 
-        public IEnumerable<Usuario> ObertTodos()
+        public IEnumerable<Usuario> ObterTodos()
         {
             return _UsuarioRepository.GetAll();
         }

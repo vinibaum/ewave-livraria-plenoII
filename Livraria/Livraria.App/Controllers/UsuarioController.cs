@@ -24,7 +24,7 @@ namespace Livraria.Presentation.Controllers
         [HttpGet]
         public IEnumerable<Usuario> Get()
         {
-            return this._usuarioService.ObertTodos();
+            return this._usuarioService.ObterTodos();
         }
 
         [HttpGet("{id:int}")]

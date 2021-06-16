@@ -12,9 +12,9 @@ namespace Livraria.Domain.Interfaces.Services
     public interface ILivroService : IServiceBase<Livro>
     {
         IEnumerable<Livro> FiltrarTitulo(string filtro);
-        IEnumerable<Livro> ObertTodos();
+        IEnumerable<Livro> ObterTodos();
         IEnumerable<Livro> ObterParaEmprestar();
-        IEnumerable<Livro> ObertParaDevolver(int idUsuario);
+        IEnumerable<Livro> ObterParaDevolver(int idUsuario);
         Livro GetById(int Id);
         Task Emprestar(int idLivro, int idUsuario);
         Task Devolver(int idLivro, int idUsuario);

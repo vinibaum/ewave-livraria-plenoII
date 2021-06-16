@@ -24,7 +24,7 @@ namespace Livraria.Presentation.Controllers
         [HttpGet]
         public IEnumerable<Livro> Get()
         {
-            return this._livroService.ObertTodos();
+            return this._livroService.ObterTodos();
         }
 
         [HttpGet("emprestar")]
@@ -36,7 +36,7 @@ namespace Livraria.Presentation.Controllers
         [HttpGet("{idUsuario:int}/devolver")]
         public IEnumerable<Livro> ObterTodosDevelover(int idUsuario)
         {
-            return this._livroService.ObertParaDevolver(idUsuario);
+            return this._livroService.ObterParaDevolver(idUsuario);
         }
 
         [HttpGet("{id:int}")]

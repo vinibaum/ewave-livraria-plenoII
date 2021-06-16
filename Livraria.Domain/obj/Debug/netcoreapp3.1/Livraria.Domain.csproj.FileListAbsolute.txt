@@ -6,3 +6,4 @@ C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Domain\obj\D
 C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Domain\obj\Debug\netcoreapp3.1\Livraria.Domain.csproj.CoreCompileInputs.cache
 C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Domain\obj\Debug\netcoreapp3.1\Livraria.Domain.dll
 C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Domain\obj\Debug\netcoreapp3.1\Livraria.Domain.pdb
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria.Domain\obj\Debug\netcoreapp3.1\Livraria.Domain.csproj.AssemblyReference.cache

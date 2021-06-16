@@ -120,7 +120,7 @@ namespace Livraria.Domain.Services
             return _livroRepository.GetById(Id);
         }
 
-        public IEnumerable<Livro> ObertTodos()
+        public IEnumerable<Livro> ObterTodos()
         {
             return _livroRepository.GetAll();
         }
@@ -130,7 +130,7 @@ namespace Livraria.Domain.Services
             return _livroRepository.GetEmprestimo();
         }
 
-        public IEnumerable<Livro> ObertParaDevolver(int idUsuario)
+        public IEnumerable<Livro> ObterParaDevolver(int idUsuario)
         {
             return _livroRepository.GetDevolucao(idUsuario);
         }

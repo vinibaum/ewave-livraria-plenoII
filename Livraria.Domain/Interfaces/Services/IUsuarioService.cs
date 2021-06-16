@@ -10,7 +10,7 @@ namespace Livraria.Domain.Interfaces.Services
 {
     public interface IUsuarioService : IServiceBase<Usuario>
     {
-        IEnumerable<Usuario> ObertTodos();
+        IEnumerable<Usuario> ObterTodos();
         Usuario GetById(int id);
         Task Save(UsuarioDto entity);
         Task Update(int id, UsuarioDto entity);
