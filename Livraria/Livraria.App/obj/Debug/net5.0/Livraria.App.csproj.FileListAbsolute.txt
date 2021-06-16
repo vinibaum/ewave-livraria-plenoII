@@ -170,3 +170,13 @@ C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App
 C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Livraria.App.Views.pdb
 C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Livraria.App.csproj.CopyComplete
 C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Livraria.App.genruntimeconfig.cache
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Razor\Pages\Usuarios\Create.cshtml.g.cs
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Razor\Pages\Usuarios\Delete.cshtml.g.cs
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Razor\Pages\Usuarios\Details.cshtml.g.cs
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Razor\Pages\Usuarios\Edit.cshtml.g.cs
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Razor\Pages\Usuarios\Index.cshtml.g.cs
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Razor\Pages\Instituicoes\Create.cshtml.g.cs
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Razor\Pages\Instituicoes\Delete.cshtml.g.cs
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Razor\Pages\Instituicoes\Details.cshtml.g.cs
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Razor\Pages\Instituicoes\Edit.cshtml.g.cs
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Razor\Pages\Instituicoes\Index.cshtml.g.cs

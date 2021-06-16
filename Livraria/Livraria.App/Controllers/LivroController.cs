@@ -16,7 +16,8 @@ namespace Livraria.Presentation.Controllers
     {
         private readonly ILivroService _livroService;
 
-        public LivroController(ILivroService livroService, LivroValidator livroValidator) : base(livroValidator)
+        public LivroController(ILivroService livroService, LivroValidator livroValidator) 
+            : base(livroValidator)
         {
             _livroService = livroService;
         }

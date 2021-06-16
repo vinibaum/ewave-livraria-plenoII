@@ -5,17 +5,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Livraria.Domain.Entities.FolderLivro;
+using Livraria.Domain.Entities.FolderUsuario;
 using Livraria.Infra.Data.Context;
-using Livraria.Presentation.Controllers;
 
-namespace Livraria.App.Pages.Livro
+namespace Livraria.App.Pages.Usuarios
 {
     public class CreateModel : PageModel
     {
-        private readonly Livraria.Infra.Data.Context.LivrariaContext _context;
-
-        
+        private readonly Livraria. _context;
 
         public CreateModel(Livraria.Infra.Data.Context.LivrariaContext context)
         {
@@ -24,12 +21,12 @@ namespace Livraria.App.Pages.Livro
 
         public IActionResult OnGet()
         {
-        ViewData["IdUsuarioReserva"] = new SelectList(_context.Usuario, "Id", "Id");
+        ViewData["NomeInstituicaoDeEnsino"] = new SelectList(_context.InstituicaoDeEnsino, "Id", "Nome");
             return Page();
         }
 
         [BindProperty]
-        public Livraria.Domain.Entities.FolderLivro.Livro Livro { get; set; }
+        public Usuario Usuario { get; set; }
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
@@ -38,8 +35,8 @@ namespace Livraria.App.Pages.Livro
             {
                 return Page();
             }
-            var controller = new LivroController(;
-            _context.Livro.Add(Livro);
+
+            _context.Usuario.Add(Usuario);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
