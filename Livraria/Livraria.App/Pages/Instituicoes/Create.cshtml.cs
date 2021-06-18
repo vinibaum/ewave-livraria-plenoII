@@ -7,16 +7,21 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Livraria.Domain.Entities.FolderInstituicaoDeEnsino;
 using Livraria.Infra.Data.Context;
+using Livraria.Domain.Interfaces.Repositories;
+using Livraria.Presentation.Controllers;
+using Livraria.Domain.Entities.FolderLivro;
+using Livraria.Domain.Interfaces.Services;
+using Livraria.Domain.Services;
 
 namespace Livraria.App.Pages.Instituicoes
 {
     public class CreateModel : PageModel
     {
-        private readonly Livraria.Infra.Data.Context.LivrariaContext _context;
+        private readonly IInstituicaoDeEnsinoService _instituicaoDeEnsinoService;
 
-        public CreateModel(Livraria.Infra.Data.Context.LivrariaContext context)
+        public CreateModel(IInstituicaoDeEnsinoService instituicaoDeEnsinoService)
         {
-            _context = context;
+            _instituicaoDeEnsinoService = instituicaoDeEnsinoService;
         }
 
         public IActionResult OnGet()
@@ -25,18 +30,28 @@ namespace Livraria.App.Pages.Instituicoes
         }
 
         [BindProperty]
-        public InstituicaoDeEnsino InstituicaoDeEnsino { get; set; }
+        public InstituicaoDeEnsinoDto InstituicaoDeEnsino { get; set; }
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
-        public async Task<IActionResult> OnPostAsync()
+        public ActionResult OnPost()
         {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
 
-            _context.InstituicaoDeEnsino.Add(InstituicaoDeEnsino);
-            await _context.SaveChangesAsync();
+            _instituicaoDeEnsinoService.Save(InstituicaoDeEnsino);
+
+            var erros = _instituicaoDeEnsinoService.Erros;
+
+            if (erros.Count > 0)
+            {
+                foreach (var item in erros)
+                {
+                    ModelState.AddModelError(string.Empty, item);
+                }
+                return Page();
+            }
 
             return RedirectToPage("./Index");
         }

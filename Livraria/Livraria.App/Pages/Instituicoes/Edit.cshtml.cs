@@ -8,15 +8,18 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Livraria.Domain.Entities.FolderInstituicaoDeEnsino;
 using Livraria.Infra.Data.Context;
+using Livraria.Domain.Interfaces.Services;
 
 namespace Livraria.App.Pages.Instituicoes
 {
     public class EditModel : PageModel
     {
+        private readonly IInstituicaoDeEnsinoService _instituicaoDeEnsinoService;
         private readonly Livraria.Infra.Data.Context.LivrariaContext _context;
 
-        public EditModel(Livraria.Infra.Data.Context.LivrariaContext context)
+        public EditModel(IInstituicaoDeEnsinoService instituicaoDeEnsinoService, LivrariaContext context)
         {
+            _instituicaoDeEnsinoService = instituicaoDeEnsinoService;
             _context = context;
         }
 
@@ -30,7 +33,7 @@ namespace Livraria.App.Pages.Instituicoes
                 return NotFound();
             }
 
-            InstituicaoDeEnsino = await _context.InstituicaoDeEnsino.FirstOrDefaultAsync(m => m.Id == id);
+            InstituicaoDeEnsino = await Task.FromResult(_instituicaoDeEnsinoService.GetById(id.Value));
 
             if (InstituicaoDeEnsino == null)
             {
@@ -41,22 +44,35 @@ namespace Livraria.App.Pages.Instituicoes
 
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see https://aka.ms/RazorPagesCRUD.
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync(int? id)
         {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
 
-            _context.Attach(InstituicaoDeEnsino).State = EntityState.Modified;
-
             try
             {
-                await _context.SaveChangesAsync();
+                var instDto = new InstituicaoDeEnsinoDto();
+                instDto.Nome = InstituicaoDeEnsino.Nome;
+                instDto.Endereco = InstituicaoDeEnsino.Endereco;
+                instDto.CNPJ = InstituicaoDeEnsino.CNPJ;
+                await _instituicaoDeEnsinoService.Update(id.Value, instDto);
+
+                var erros = _instituicaoDeEnsinoService.Erros;
+
+                if (erros.Count > 0)
+                {
+                    foreach (var item in erros)
+                    {
+                        ModelState.AddModelError(string.Empty, item);
+                    }
+                    return Page();
+                }
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!InstituicaoDeEnsinoExists(InstituicaoDeEnsino.Id))
+                if (!InstituicaoDeEnsinoExists(id.Value))
                 {
                     return NotFound();
                 }
@@ -71,7 +87,7 @@ namespace Livraria.App.Pages.Instituicoes
 
         private bool InstituicaoDeEnsinoExists(int id)
         {
-            return _context.InstituicaoDeEnsino.Any(e => e.Id == id);
+            return _instituicaoDeEnsinoService.GetById(id).Id > -1;
         }
     }
 }

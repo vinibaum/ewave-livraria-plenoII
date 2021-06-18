@@ -6,6 +6,6 @@ namespace Livraria.Domain.Interfaces.Services.Base
 {
     public interface IServiceBase<TEntity> : IDisposable where TEntity : class
     {
-        IList<string> Erros { get; }
+        public IList<string> Erros { get; }
     }
 }

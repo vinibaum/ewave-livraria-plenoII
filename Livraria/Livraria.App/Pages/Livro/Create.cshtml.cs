@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Livraria.Domain.Entities.FolderLivro;
 using Livraria.Infra.Data.Context;
 using Livraria.Presentation.Controllers;
+using Livraria.Domain.Interfaces.Services;
+using Livraria.Domain.Services;
 
 namespace Livraria.App.Pages.Livro
 {
@@ -38,7 +40,6 @@ namespace Livraria.App.Pages.Livro
             {
                 return Page();
             }
-            var controller = new LivroController(;
             _context.Livro.Add(Livro);
             await _context.SaveChangesAsync();
 

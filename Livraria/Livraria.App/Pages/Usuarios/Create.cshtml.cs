@@ -12,7 +12,7 @@ namespace Livraria.App.Pages.Usuarios
 {
     public class CreateModel : PageModel
     {
-        private readonly Livraria. _context;
+        private readonly Livraria.Infra.Data.Context.LivrariaContext _context;
 
         public CreateModel(Livraria.Infra.Data.Context.LivrariaContext context)
         {

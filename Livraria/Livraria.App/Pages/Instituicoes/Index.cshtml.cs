@@ -7,23 +7,24 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Livraria.Domain.Entities.FolderInstituicaoDeEnsino;
 using Livraria.Infra.Data.Context;
+using Livraria.Domain.Interfaces.Services;
+using AutoMapper;
 
 namespace Livraria.App.Pages.Instituicoes
 {
     public class IndexModel : PageModel
     {
-        private readonly Livraria.Infra.Data.Context.LivrariaContext _context;
-
-        public IndexModel(Livraria.Infra.Data.Context.LivrariaContext context)
+        private readonly IInstituicaoDeEnsinoService _instituicaoDeEnsinoService;
+        public IndexModel(IInstituicaoDeEnsinoService instituicaoDeEnsinoService)
         {
-            _context = context;
+            _instituicaoDeEnsinoService = instituicaoDeEnsinoService;
         }
 
-        public IList<InstituicaoDeEnsino> InstituicaoDeEnsino { get;set; }
+        public IList<InstituicaoDeEnsino> InstituicaoDeEnsino { get; set; }
 
-        public async Task OnGetAsync()
-        {
-            InstituicaoDeEnsino = await _context.InstituicaoDeEnsino.ToListAsync();
+        public async Task OnGetAsync() 
+        { 
+            InstituicaoDeEnsino = await Task.FromResult(_instituicaoDeEnsinoService.ObterTodos().ToList());            
         }
     }
 }
