@@ -5,4 +5,4 @@ services:
     image: ${DOCKER_REGISTRY-}livrariaapp
     build:
       context: .
-      dockerfile: Livraria.App/Dockerfile
+      dockerfile: src/Livraria.App/Dockerfile
