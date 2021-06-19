@@ -1,5 +1,8 @@
+using Livraria.Infra.Data.Context;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
@@ -13,7 +16,19 @@ namespace Livraria.App
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            var build = CreateHostBuilder(args).Build();
+            RegisterDbMigration<LivrariaContext>(build);
+            build.Run();
+        }
+
+        private static void RegisterDbMigration<TDbContext>(IHost host) where TDbContext : DbContext
+        {
+            using (var scope = host.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                var context = services.GetService<TDbContext>();
+                context.Database.Migrate();
+            }
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

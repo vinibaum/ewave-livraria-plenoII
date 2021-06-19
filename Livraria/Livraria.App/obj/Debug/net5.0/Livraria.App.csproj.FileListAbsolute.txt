@@ -165,6 +165,11 @@ C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App
 C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Razor\Pages\Privacy.cshtml.g.cs
 C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
 C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Razor\Pages\Usuarios\Create.cshtml.g.cs
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Razor\Pages\Usuarios\Delete.cshtml.g.cs
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Razor\Pages\Usuarios\Details.cshtml.g.cs
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Razor\Pages\Usuarios\Edit.cshtml.g.cs
+C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Razor\Pages\Usuarios\Index.cshtml.g.cs
 C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
 C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
 C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Livraria.App.RazorTargetAssemblyInfo.cache
@@ -175,8 +180,3 @@ C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App
 C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\ref\Livraria.App.dll
 C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Livraria.App.pdb
 C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Livraria.App.genruntimeconfig.cache
-C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Razor\Pages\Usuarios\Create.cshtml.g.cs
-C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Razor\Pages\Usuarios\Delete.cshtml.g.cs
-C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Razor\Pages\Usuarios\Details.cshtml.g.cs
-C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Razor\Pages\Usuarios\Edit.cshtml.g.cs
-C:\Users\Vini\source\repos\vinibaum\ewave-livraria-plenoII\Livraria\Livraria.App\obj\Debug\net5.0\Razor\Pages\Usuarios\Index.cshtml.g.cs

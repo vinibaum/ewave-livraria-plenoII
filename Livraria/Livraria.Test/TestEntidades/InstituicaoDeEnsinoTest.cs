@@ -47,7 +47,7 @@ namespace Livraria.test.TestEntidades
         }
 
         [TestMethod]
-        public async Task DeveCriticarNomeGigante()
+        public async Task DeveCriticarNomeMuitoGrande()
         {
             var instituicaoDeEnsino = new InstituicaoDeEnsinoBuilder().BuildDto();
             instituicaoDeEnsino.Nome = "".PadLeft(10000, 'A');
@@ -68,7 +68,7 @@ namespace Livraria.test.TestEntidades
         }
 
         [TestMethod]
-        public async Task DeveCriticarEnderecoGigante()
+        public async Task DeveCriticarEnderecoMuitoGrande()
         {
             var instituicaoDeEnsino = new InstituicaoDeEnsinoBuilder().BuildDto();
             instituicaoDeEnsino.Endereco = "".PadLeft(10000, 'A');

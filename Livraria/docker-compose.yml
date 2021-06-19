@@ -1,0 +1,8 @@
+version: '3.6'
+
+services:
+  livraria.app:
+    image: ${DOCKER_REGISTRY-}livrariaapp
+    build:
+      context: .
+      dockerfile: Livraria.App/Dockerfile

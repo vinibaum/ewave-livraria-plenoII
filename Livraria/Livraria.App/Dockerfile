@@ -8,6 +8,9 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["Livraria.App/Livraria.App.csproj", "Livraria.App/"]
+COPY ["../Livraria.Infra.CrossCutting/Livraria.Infra.CrossCutting.csproj", "../Livraria.Infra.CrossCutting/"]
+COPY ["../Livraria.Infra.Data/Livraria.Infra.Data.csproj", "../Livraria.Infra.Data/"]
+COPY ["../Livraria.Domain/Livraria.Domain.csproj", "../Livraria.Domain/"]
 RUN dotnet restore "Livraria.App/Livraria.App.csproj"
 COPY . .
 WORKDIR "/src/Livraria.App"
