@@ -23,8 +23,7 @@ namespace Livraria.App.Pages.Livro
 
         public async Task OnGetAsync()
         {
-            Livro = await _context.Livro
-                .Include(l => l.UsuarioReserva).ToListAsync();
+            Livro = await _context.Livro.Include(l => l.UsuarioReserva).ToListAsync();
         }
     }
 }

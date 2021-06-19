@@ -13,5 +13,6 @@ namespace Livraria.Domain.Entities.FolderLivro
         public string Autor { get; set; }
         public string Editora { get; set; }
         public string Descricao { get; set; }
+        public int? IdUsurarioReserva { get; set; }
     }
 }

@@ -8,16 +8,19 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Livraria.Domain.Entities.FolderUsuario;
 using Livraria.Infra.Data.Context;
+using Livraria.Domain.Interfaces.Services;
 
 namespace Livraria.App.Pages.Usuarios
 {
     public class EditModel : PageModel
     {
         private readonly Livraria.Infra.Data.Context.LivrariaContext _context;
+        private readonly IUsuarioService _iusuarioservice;
 
-        public EditModel(Livraria.Infra.Data.Context.LivrariaContext context)
+        public EditModel(IUsuarioService iusuarioservice, LivrariaContext context)
         {
             _context = context;
+            _iusuarioservice = iusuarioservice;
         }
 
         [BindProperty]
@@ -37,7 +40,7 @@ namespace Livraria.App.Pages.Usuarios
             {
                 return NotFound();
             }
-           ViewData["IdInstituicaoDeEnsino"] = new SelectList(_context.InstituicaoDeEnsino, "Id", "Id");
+            ViewData["IdInstituicaoDeEnsino"] = new SelectList(_context.InstituicaoDeEnsino, "Id", "CNPJ");
             return Page();
         }
 
@@ -47,14 +50,32 @@ namespace Livraria.App.Pages.Usuarios
         {
             if (!ModelState.IsValid)
             {
+                ViewData["IdInstituicaoDeEnsino"] = new SelectList(_context.InstituicaoDeEnsino, "Id", "CNPJ");
                 return Page();
             }
 
-            _context.Attach(Usuario).State = EntityState.Modified;
+            var usr = new UsuarioDto();
+            usr.Nome = Usuario.Nome;
+            usr.Endereco = Usuario.Endereco;
+            usr.CPF = Usuario.CPF;
+            usr.Telefone = Usuario.Telefone;
+            usr.Email = Usuario.Email;
+            usr.IdInstituicaoDeEnsino = Usuario.IdInstituicaoDeEnsino;
 
             try
             {
-                await _context.SaveChangesAsync();
+                await _iusuarioservice.Update(Usuario.Id, usr);
+
+                var erros = _iusuarioservice.Erros;
+                if (erros.Count > 0)
+                {
+                    foreach (var item in erros)
+                    {
+                        ModelState.AddModelError(string.Empty, item);
+                    }
+                    ViewData["IdInstituicaoDeEnsino"] = new SelectList(_context.InstituicaoDeEnsino, "Id", "CNPJ");
+                    return Page();
+                }
             }
             catch (DbUpdateConcurrencyException)
             {

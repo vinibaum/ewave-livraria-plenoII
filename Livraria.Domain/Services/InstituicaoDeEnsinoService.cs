@@ -26,6 +26,7 @@ namespace Livraria.Domain.Services
         {
             _instituicaoDeEnsinoRepository = InstituicaoDeEnsinoRepository;
             _instituicaoValidator = InstituicaoValidator;
+            Erros = new List<string>();
         }
 
         public async Task Save(InstituicaoDeEnsinoDto dto)

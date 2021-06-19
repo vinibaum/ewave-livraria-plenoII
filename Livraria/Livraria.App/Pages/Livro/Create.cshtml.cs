@@ -15,23 +15,24 @@ namespace Livraria.App.Pages.Livro
 {
     public class CreateModel : PageModel
     {
-        private readonly Livraria.Infra.Data.Context.LivrariaContext _context;
+        private readonly ILivroService _ILivroService;
+        private readonly LivrariaContext _context;
 
-        
-
-        public CreateModel(Livraria.Infra.Data.Context.LivrariaContext context)
+        public CreateModel(ILivroService _ilivroService, LivrariaContext context)
         {
+            _ILivroService = _ilivroService;
             _context = context;
+
         }
 
         public IActionResult OnGet()
         {
-        ViewData["IdUsuarioReserva"] = new SelectList(_context.Usuario, "Id", "Id");
+            ViewData["IdUsuarioReserva"] = new SelectList(_context.Usuario, "Id", "Nome");
             return Page();
         }
 
         [BindProperty]
-        public Livraria.Domain.Entities.FolderLivro.Livro Livro { get; set; }
+        public Domain.Entities.FolderLivro.Livro Livro { get; set; }
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
@@ -40,8 +41,32 @@ namespace Livraria.App.Pages.Livro
             {
                 return Page();
             }
-            _context.Livro.Add(Livro);
-            await _context.SaveChangesAsync();
+
+            var livro = new LivroDto
+            {
+                Titulo = Livro.Titulo,
+                Genero = Livro.Genero,
+                Publicacao = Livro.Publicacao,
+                Paginas = Livro.Paginas,
+                Autor = Livro.Autor,
+                Editora = Livro.Editora,
+                Descricao = Livro.Descricao,
+                IdUsurarioReserva = Livro.IdUsuarioReserva
+                
+            };
+
+            await _ILivroService.Save(livro);
+
+            var erros = _ILivroService.Erros;
+
+            if (erros.Count > 0)
+            {
+                foreach (var item in erros)
+                {
+                    ModelState.AddModelError(string.Empty, item);
+                }
+                return Page();
+            }
 
             return RedirectToPage("./Index");
         }

@@ -39,6 +39,9 @@ namespace Livraria.Domain.Entities.FolderLivro
         public bool Emprestado { get; set; }
         public bool Reservado { get; set; }
         public virtual Usuario UsuarioReserva { get; set; }
+
+        [Display(Name = "Reservado pelo usuário:")]
+        [Required(ErrorMessage = "Campo obrigatório!")]
         public int? IdUsuarioReserva { get; set; }
 
         public void DevolverLivro()

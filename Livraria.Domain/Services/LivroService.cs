@@ -20,7 +20,7 @@ namespace Livraria.Domain.Services
         private readonly IUsuarioLivroEmprestadoRepository _usuarioLivroEmprestadoRepository;
         private LivroValidator _livroValidator;
 
-        public IList<string> Erros => throw new NotImplementedException();
+        public IList<string> Erros { get; set; }
 
         public LivroService(ILivroRepository livroRepository,
                             IUsuarioRepository usuarioRepository,
@@ -31,6 +31,7 @@ namespace Livraria.Domain.Services
             _usuarioLivroEmprestadoRepository = usuarioLivroEmprestadoRepository;
             _livroValidator = livroValidator;
             _usuarioRepository = usuarioRepository;
+            Erros = new List<string>();
         }
 
         public async Task Save(LivroDto dto)
@@ -45,9 +46,14 @@ namespace Livraria.Domain.Services
                     Paginas = dto.Paginas,
                     Autor = dto.Autor,
                     Editora = dto.Editora,
-                    Descricao = dto.Descricao
+                    Descricao = dto.Descricao,
+                    IdUsuarioReserva = dto.IdUsurarioReserva
                 };
                 await _livroRepository.Save(livro);
+            }
+            else
+            {
+                Erros = _livroValidator.ListaErros;
             }
         }
 
@@ -64,6 +70,10 @@ namespace Livraria.Domain.Services
                 livro.Editora = dto.Editora;
                 livro.Descricao = dto.Descricao;
                 await _livroRepository.Update(livro);
+            }
+            else
+            {
+                Erros = _livroValidator.ListaErros;
             }
         }
 
@@ -82,6 +92,10 @@ namespace Livraria.Domain.Services
                 await _livroRepository.Update(livro);
                 await _usuarioLivroEmprestadoRepository.Save(usuarioLivroEmprestado);
             }
+            else
+            {
+                Erros = _livroValidator.ListaErros;
+            }
         }
 
         public async Task Devolver(int idLivro, int idUsuario)
@@ -96,6 +110,10 @@ namespace Livraria.Domain.Services
                 await _livroRepository.Update(livro);
                 await _usuarioLivroEmprestadoRepository.Update(usuarioLivroEmprestado);
             }
+            else
+            {
+                Erros = _livroValidator.ListaErros;
+            }
         }
 
         public async Task Reservar(int idLivro, int idUsuario)
@@ -107,12 +125,20 @@ namespace Livraria.Domain.Services
                 livro.Reservar(usuario);
                 await _livroRepository.Update(livro);
             }
+            else
+            {
+                Erros = _livroValidator.ListaErros;
+            }
         }
 
         public async Task Delete(int id)
         {
             if ( _livroValidator.ValidarDelete(id))
                 await _livroRepository.Delete(_livroRepository.GetById(id));
+            else
+            {
+                Erros = _livroValidator.ListaErros;
+            }
         }
 
         public Livro GetById(int Id)
